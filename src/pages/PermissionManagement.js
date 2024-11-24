@@ -83,9 +83,24 @@ const PermissionForm = ({ onSave, onCancel, permissionData }) => {
   const [description, setDescription] = useState(
     permissionData ? permissionData.description : ""
   );
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) {
+      newErrors.name = "Please enter a valid Permission Name.";
+    }
+    if (!description.trim()) {
+      newErrors.description = "Please provide a description.";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = () => {
-    onSave({ name, description });
+    if (validate()) {
+      onSave({ name, description });
+    }
   };
 
   return (
@@ -98,6 +113,9 @@ const PermissionForm = ({ onSave, onCancel, permissionData }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        {errors.name && (
+          <p style={{ color: "red", marginTop: "5px" }}>{errors.name}</p>
+        )}
       </div>
       <div>
         <label>Description:</label>
@@ -105,6 +123,9 @@ const PermissionForm = ({ onSave, onCancel, permissionData }) => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
+        {errors.description && (
+          <p style={{ color: "red", marginTop: "5px" }}>{errors.description}</p>
+        )}
       </div>
       <div className="form-actions">
         <button onClick={handleSubmit}>Save</button>

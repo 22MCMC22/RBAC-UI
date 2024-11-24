@@ -76,6 +76,7 @@ const RoleForm = ({ onSave, onCancel, roleData }) => {
   const [permissions, setPermissions] = useState(
     roleData ? roleData.permissions : []
   );
+  const [errors, setErrors] = useState({});
 
   const handlePermissionChange = (e) => {
     const { value, checked } = e.target;
@@ -86,8 +87,23 @@ const RoleForm = ({ onSave, onCancel, roleData }) => {
     }
   };
 
+  const validate = () => {
+    const newErrors = {};
+    if (!name.trim()) {
+      
+      newErrors.name = "Please enter a valid Role Name.";
+    }
+    if (permissions.length === 0) {
+      newErrors.permissions = "Please select at least one permission.";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = () => {
-    onSave({ name, permissions });
+    if (validate()) {
+      onSave({ name, permissions });
+    }
   };
 
   return (
@@ -100,6 +116,7 @@ const RoleForm = ({ onSave, onCancel, roleData }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        {errors.name && <p className="error">{errors.name}</p>}
       </div>
       <div>
         <label>Permissions:</label>
@@ -132,6 +149,7 @@ const RoleForm = ({ onSave, onCancel, roleData }) => {
             Delete
           </label>
         </div>
+        {errors.permissions && <p className="error">{errors.permissions}</p>}
       </div>
       <div className="form-actions">
         <button onClick={handleSubmit}>Save</button>

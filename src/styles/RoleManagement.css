@@ -52,4 +52,8 @@
   .role-management table td button:hover {
     background-color: #31b0d5;
   }
+
+  .error {
+    color: red;
+  }
   

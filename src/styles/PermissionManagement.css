@@ -1,0 +1,55 @@
+.permission-management {
+    padding: 20px;
+  }
+  
+  .permission-management h2 {
+    color: #4a90e2;
+    font-size: 2rem;
+  }
+  
+  .permission-management button {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .permission-management button:hover {
+    background-color: #d81b60;
+  }
+  
+  .permission-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .permission-management table th,
+  .permission-management table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .permission-management table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .permission-management table td button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .permission-management table td button:hover {
+    background-color: #e64a19;
+  }
+  

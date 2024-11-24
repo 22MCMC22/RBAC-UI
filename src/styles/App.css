@@ -1,0 +1,45 @@
+/* App.css */
+
+/* Set a grey background for the entire page */
+body {
+    background-color: #808080; /* Grey */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Optional: Consistent font styling */
+  }
+  
+  /* Style the app container */
+  .app-container {
+    min-height: 100vh; /* Ensure the container covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Other styles for header and links */
+  .app-header {
+    margin-bottom: 20px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+  }
+  
+  .app-main {
+    text-align: center;
+  }
+  
+  

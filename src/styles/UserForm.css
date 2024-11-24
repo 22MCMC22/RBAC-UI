@@ -1,0 +1,55 @@
+.user-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .user-form h3 {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    margin-bottom: 15px;
+  }
+  
+  .user-form div {
+    margin-bottom: 10px;
+  }
+  
+  .user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#4B5320;
+  }
+  
+  .user-form input,
+  .user-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .user-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .user-form button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .user-form button:hover {
+    background-color: #357ab7;
+  }
+  

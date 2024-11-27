@@ -22,7 +22,7 @@ const containerStyle = {
 };
 
 const stylingHeader = {
-  color: "#32CD32", // Light green
+  color: "#4B5320", // Light green
   textAlign: "center",
   fontWeight: "bold",
   margin: "5px 0",
@@ -30,9 +30,11 @@ const stylingHeader = {
 };
 
 const appContainerStyle = {
-  backgroundColor: "#CCCCFF",
-  minHeight: "100vh", // Full viewport height
+  backgroundColor: "#FAF3DD", // Light grey background
+  minHeight: "90vh", // Full viewport height
   display: "flex",
+  width: "100%",
+  height: "100%",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
@@ -42,8 +44,8 @@ const appContainerStyle = {
 const buttonStyle = {
   margin: "10px",
   padding: "10px 20px",
-  backgroundColor: "#9FE2BF", // Pink background
-  color: "black", // Text color
+  backgroundColor: "#007BFF",
+  color: "white", // Text color
   border: "none",
   borderRadius: "5px",
   cursor: "pointer",
@@ -73,11 +75,12 @@ const App = () => {
       <div style={appContainerStyle}>
         <header className="app-header">
           <div style={containerStyle}>
-            <h2 style={stylingHeader}>Welcome Rayyan's UI</h2>
-            <h3 style={stylingHeader}>
-              Feel free to navigate between User Management, Role Management, and Permission Management
-            </h3>
-            <h1 style={stylingHeader}>Role-Based Access Control (RBAC) System</h1>
+          <h2 style={stylingHeader}>Welcome to Parwej's Website</h2>
+          <h3 style={stylingHeader}>
+            I'm giving you full control; you're free to edit, delete, and design
+            anything
+          </h3>
+          <h1 style={stylingHeader}>Role-Based Access Control (RBAC) System</h1>
           </div>
           {/* Navigation Buttons */}
           <NavigationButtons />

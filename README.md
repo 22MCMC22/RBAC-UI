@@ -61,7 +61,7 @@ src/styles: CSS files for styling.
 App.js: Main navigation and routing logic.
 
 
-Features:
+Evaluation Criteria:
 
 Creativity and Design Quality-
 Visual appeal and layout design.

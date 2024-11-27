@@ -1,67 +1,3 @@
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-// import UserManagement from "./pages/UserManagement";
-// import RoleManagement from "./pages/RoleManagement";
-// import PermissionManagement from "./pages/PermissionManagement";
-// import "./App.css";
-
-// // Inline styling objects
-// //Styling part
-// const stylingHeader = {
-//     color: "#4B5320", 
-//     textAlign: "center",
-//     fontWeight: "bold",
-//     margin: "10px 0",
-//   };
-
-//   const appContainerStyle = {
-//     backgroundColor: "#FAF3DD", // Light grey background
-//     minHeight: "90vh",
-//     display: "flex",
-//     flexDirection: "column",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   };
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div style={appContainerStyle}>
-//         <header className="app-header">
-//           <h2 style={stylingHeader}>Welcome to Parwej's Website</h2>
-//           <h3 style={stylingHeader}>
-//             I'm giving you full controls, you're free to edit, delete and design
-//             anything
-//           </h3>
-//           <h1 style={stylingHeader}>Role-Based Access Control (RBAC) System</h1>
-//           <nav>
-//             <ul className="nav-links">
-//               <li>
-//                 <Link to="/">User Management</Link>
-//               </li>
-//               <li>
-//                 <Link to="/roles">Role Management</Link>
-//               </li>
-//               <li>
-//                 <Link to="/permissions">Permission Management</Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </header>
-//         <main className="app-main">
-//           <Routes>
-//             <Route path="/" element={<UserManagement />} />
-//             <Route path="/roles" element={<RoleManagement />} />
-//             <Route path="/permissions" element={<PermissionManagement />} />
-//           </Routes>
-//         </main>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import UserManagement from "./pages/UserManagement";
@@ -69,22 +5,35 @@ import RoleManagement from "./pages/RoleManagement";
 import PermissionManagement from "./pages/PermissionManagement";
 import "./App.css";
 
-// Styling
+// Styles
+const containerStyle = {
+  display: "flex", // Flex container for alignment
+  flexDirection: "column", // Vertical stacking
+  alignItems: "center", // Center items horizontally
+  justifyContent: "center", // Center items vertically
+  gap: "15px", // Space between items
+  width: "1100px", // Fixed container width
+  margin: "50px auto", // Center container horizontally
+  padding: "20px",
+  border: "2px dashed #ccc", // Dashed border for light inline/incline effect
+  borderRadius: "10px",
+  backgroundColor: "#FFFBF2", // Light background color
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Subtle shadow for elevation
+};
+
 const stylingHeader = {
-  color: "#4B5320",
+  color: "#32CD32", // Light green
   textAlign: "center",
   fontWeight: "bold",
   margin: "5px 0",
-  padding: "5px",
+  fontStyle: "italic", // Inclined text
 };
 
 const appContainerStyle = {
-  backgroundColor: "#FAF3DD", // Light grey background
-  minHeight: "90vh",
+  backgroundColor: "#CCCCFF",
+  minHeight: "100vh", // Full viewport height
   display: "flex",
   flexDirection: "column",
-  width: "100%",
-  height: "100%",
   alignItems: "center",
   justifyContent: "center",
   padding: "5px",
@@ -93,8 +42,8 @@ const appContainerStyle = {
 const buttonStyle = {
   margin: "10px",
   padding: "10px 20px",
-  backgroundColor: "#007BFF",
-  color: "white",
+  backgroundColor: "#9FE2BF", // Pink background
+  color: "black", // Text color
   border: "none",
   borderRadius: "5px",
   cursor: "pointer",
@@ -123,13 +72,13 @@ const App = () => {
     <Router>
       <div style={appContainerStyle}>
         <header className="app-header">
-          <h2 style={stylingHeader}>Welcome to Parwej's Website</h2>
-          <h3 style={stylingHeader}>
-            I'm giving you full control; you're free to edit, delete, and design
-            anything
-          </h3>
-          <h1 style={stylingHeader}>Role-Based Access Control (RBAC) System</h1>
-
+          <div style={containerStyle}>
+            <h2 style={stylingHeader}>Welcome Rayyan's UI</h2>
+            <h3 style={stylingHeader}>
+              Feel free to navigate between User Management, Role Management, and Permission Management
+            </h3>
+            <h1 style={stylingHeader}>Role-Based Access Control (RBAC) System</h1>
+          </div>
           {/* Navigation Buttons */}
           <NavigationButtons />
         </header>
